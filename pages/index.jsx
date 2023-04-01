@@ -1,14 +1,18 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import Navbar from "../components/Navbar/Navbar";
-import AxiosProducts from "../components/Axios/AxiosProducts";
+import AxiosProductList from "../components/Axios/AxiosProductList";
+import Card from "../components/Card/Card";
 
 export default function home() {
   const [productList, setProductList] = useState({});
 
   return (
     <div>
-      <AxiosProducts setProductList={setProductList} />
+      <AxiosProductList setProductList={setProductList} />
       <Navbar />
+      {productList.data?.map((product) => {
+        return <Card product={product} key={product.id} />;
+      })}
     </div>
   );
 }
