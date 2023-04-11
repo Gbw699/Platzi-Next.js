@@ -6,7 +6,7 @@ import AxiosProduct from "../../components/Axios/AxiosProduct";
 export default function ProductItem() {
   const [product, setProduct] = useState({});
   const router = useRouter();
- 
+
   return (
     <div>
       <Link href="/">Volver</Link>

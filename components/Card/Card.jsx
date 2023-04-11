@@ -13,7 +13,7 @@ export default function Card({ product }) {
       <h2>Taste</h2>
       <p>{product.attributes.taste}</p>
       <span>{product.attributes.hardiness}</span>
-      <span>{product.price}</span>
+      <span>${product.price}</span>
     </div>
   );
 }
